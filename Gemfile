@@ -19,16 +19,17 @@ group :development, :test do
   gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
-  gem 'autotest-fsevent' if RUBY_PLATFORM =~ /darwin/
   gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
   gem 'spork', '0.9.0.rc4'
   gem 'factory_girl_rails', '1.0'
-  
   gem 'ZenTest'
   gem 'autotest'
   gem 'autotest-rails'
-  gem 'autotest-growl' if RUBY_PLATFORM =~ /darwin/
+ if RUBY_PLATFORM.downcase.include?("darwin") # I'm on Mac
+    gem 'autotest-fsevent'
+    gem 'autotest-growl'
+ end
 end
 
 
