@@ -26,10 +26,8 @@ group :development, :test do
   gem 'ZenTest'
   gem 'autotest'
   gem 'autotest-rails'
- if RUBY_PLATFORM.downcase.include?("darwin") # I'm on Mac
-    gem 'autotest-fsevent'
-    gem 'autotest-growl'
- end
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
 end
 
 
