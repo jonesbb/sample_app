@@ -29,6 +29,7 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'autotest-fsevent'
   gem 'autotest-growl'
+  gem "database_cleaner"
 end
 
 
